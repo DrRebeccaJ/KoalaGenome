@@ -1,0 +1,16 @@
+24 October, 2017
+
+This directory contains code that was used to generate SNP genotypes from koala exon capture data. 
+
+The code is provided for archival purposes, to record the methods used in these analyses. 
+ 
+The script snp/sh/genSNPs.sh was used to call software to map reads to the reference genome, process the resulting files, and then call variants. 
+
+This script, genSNPs.sh, called the perl scripts: 
+snp/pl/map2refs.pl
+snp/pl/processBAM.pl
+
+The illumina reads were first cleaned using a workflow that performs quality and adapter trimming, and removal of duplicate and contaminant reads (script 2-scrubReads.pl obtained from https://github.com/MVZSEQ/SCPP). The parameters used here when calling this script are recorded in clean/sh/sub_scrubreads.sh  
+
+
+
